@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
  
   s.test_files = s.files.select {|path| path =~ /^test\/spec_.*\.rb/}
  
-  s.extra_rdoc_files = %w[README.rdoc COPYING]
+  s.extra_rdoc_files = %w[README.rdoc MIT-LICENSE]
   s.add_dependency 'rack', '~> 0.9.1'
   s.add_dependency 'test-spec', '~> 0.9.0'
   s.add_development_dependency 'json', '>= 1.1'
