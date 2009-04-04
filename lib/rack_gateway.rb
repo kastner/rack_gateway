@@ -27,12 +27,11 @@ module Rack
         my_key = key.gsub(/^HTTP_/, '').gsub(/_/, '-').downcase.capitalize
         [my_key, value]
       end
-      headers = Hash[*headers.flatten]
+      Hash[*headers.flatten]
     end
     
     def response_headers(curl)
       headers = curl.header_str.split("\r\n")[1..-1].map{|h| h.split(": ")}
-      headers
       Hash[*headers.flatten]
     end
     
